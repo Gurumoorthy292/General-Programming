@@ -1,0 +1,32 @@
+You are given all numbers between 1,2,.....,n except one. Your task is to find the missing number.
+
+SOURCE CODE:
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n-1];
+    for(int i=0;i<n-1;i++)
+    {
+        cin>>arr[i];
+    }
+    int totalsum = n*(n+1)/2;
+    int arrsum=0;
+    for(int i=0;i<n-1;i++)
+    {
+        arrsum+=arr[i];
+    }
+    cout<<totalsum-arrsum;
+    return 0;
+}
+
+OUTPUT:
+
+Input:
+5
+2 3 1 5
+Output:
+4
